@@ -21,7 +21,7 @@ class MasyarakatController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'nomor_kk'      => 'required|numeric',
+            'nomor_kk'      => 'nullable|numeric',
             'nomor_ktp'     => 'required|numeric|unique:masyarakats,nomor_ktp',
             'nama'          => 'required|string|max:255',
             'alamat'        => 'required|string',
